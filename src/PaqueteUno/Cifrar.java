@@ -1,5 +1,4 @@
 package PaqueteUno;
-
 public class Cifrar {
 
     public String cifrar(String cadena, int n) {
@@ -19,9 +18,7 @@ public class Cifrar {
             } else {
                 nuevaCadena += letras.charAt((pos + n) % letras.length());
             }
-
         }
-
         return nuevaCadena;
     }
 
