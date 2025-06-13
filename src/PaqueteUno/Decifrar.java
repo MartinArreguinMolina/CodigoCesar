@@ -3,7 +3,7 @@ package PaqueteUno;
 public class Decifrar {
 
     public String decifrar(String cadena, int n) {
-        String letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String abacedario = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         char x;
         int pos;
         String cadenaNueva = "";
@@ -13,18 +13,17 @@ public class Decifrar {
         
         for (int i = 0; i < cadena.length(); i++) {
             x = cadena.charAt(i);
-            pos = letras.indexOf(x);
+            pos = abacedario.indexOf(x);
 
             if (pos == -1) {
                 cadenaNueva += x;
             } else if (pos - n < 0) {
-                cadenaNueva += letras.charAt(letras.length() + (pos - n));
+                cadenaNueva += abacedario.charAt(abacedario.length() + (pos - n));
             } else {
-                cadenaNueva += letras.charAt((pos - n));
+                cadenaNueva += abacedario.charAt((pos - n));
             }
         }
 
         return cadenaNueva;
     }
-
 }
